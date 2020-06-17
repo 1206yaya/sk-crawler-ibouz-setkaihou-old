@@ -116,6 +116,8 @@ public class SetKaihou {
 
 			UserSearchPage userSearchPage = open(ibouz.getUserSearchURL(), UserSearchPage.class);
 			userSearchPage.setIds(allIds);
+			// 初回ログイン 未ログインON
+			userSearchPage.clickNewaccLoginNotLogin();
 			UserSearchResultPage userSearchResultPage = userSearchPage.search();
 			KaihouEditPage kaihouEditPage = userSearchResultPage.clickKaihouYoyaku();
 			String title = titles.get(titleCount++);
