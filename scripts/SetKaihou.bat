@@ -2,7 +2,9 @@
 cd %~dp0
 cd ../
 
-rm -rf .gradle
-rm -rf build
+
+rd /s /q build 
+rd /s /q .gradle
+
 
 cmd /k gradlew.bat test --tests  "app.core.SetKaihou" -i
